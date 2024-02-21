@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personal Portfolio Website</title>
+    
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/6feadf514e.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <style>
+      .hero {
+          position: absolute;
+          top: 10px; 
+          left: 60%; 
+      }
+   </style>
+    <div class="hero">
+      <nav>
+        
+        <ul>
+            <li><a href="C:/Users/VARUN%20SHAJI/Desktop/portfolio/index.html">Home</a></li>
+            <li><a href="C:/Users/VARUN%20SHAJI/Desktop/portfolio/about.html">About</a></li>
+            <li><a href="C:/Users/VARUN%20SHAJI/Desktop/portfolio/project.html">Projects</a></li>
+            <li><a href="C:/Users/VARUN%20SHAJI/Desktop/portfolio/contact.html">Contact</a></li>
+        </ul>
+        
+        
+      </nav>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>varunshaji45@gmail.com</p>
+                    <p><i class="fa-sharp fa-solid fa-phone"></i>+91 9947797195</p><br>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/_varun.insta_?igsh=ZnF6MnRnNzQ2NDUx"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/varun-shaji"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <style>
+                            .btn {
+                                color: #000000; 
+                            }
+                        </style>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                    
+                </div>
+            </div>
+    
+        
+        </div>
+        
+    </div>
+    <script>
+        const scriptURL = '<https://script.google.com/macros/s/AKfycbzislEHyCF8Z5InT14pMa0azKfJ3o7MP9wZV_LqQ55jIMTXUwz-ZEuNy6mE62UXVli0/exec>'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+
+
+
+
+
+
+</body>
+</html>

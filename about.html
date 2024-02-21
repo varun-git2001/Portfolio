@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+   
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <style>
+      .hero {
+          position: absolute;
+          top: 10px; 
+          left: 60%; 
+      }
+   </style>
+    <div class="hero">
+      <nav>
+        
+        <ul>
+            <li><a href="C:/Users/VARUN%20SHAJI/Desktop/portfolio/index.html">Home</a></li>
+            <li><a href="C:/Users/VARUN%20SHAJI/Desktop/portfolio/about.html">About</a></li>
+            <li><a href="C:/Users/VARUN%20SHAJI/Desktop/portfolio/project.html">Projects</a></li>
+            <li><a href="C:/Users/VARUN%20SHAJI/Desktop/portfolio/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+        
+        
+      
+    </div>
+    <div id="about">
+      <div class="container">
+          <div class="row">
+              <div class="about-col-1">
+                <h1 class="subtitle">About Me</h1>
+                  <p>
+                    Welcome to my portfolio! I'm Varun, a passionate and dedicated Electronics Engineering student.
+                    I believe in continuous learning and staying updated with the latest trends and technologies in the field.
+                     Whether it's exploring new programming languages, experimenting with innovative design concepts,
+                    or honing my project management skills, I am always eager to expand my knowledge and enhance my capabilities. 
+                       
+                    
+                  </p>
+                  
+              </div>
+              <div class="about-col-2">
+                  
+                  <div class="tab-titles">
+                      <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                      <p class="tab-links" onclick="opentab('education')">Education</p>
+                      <p class="tab-links" onclick="opentab('courses')">Courses</p>
+                  </div>
+                  <div class="tab-contents active-tab" id="skills">
+                      <ul>
+                          <li><span>Programming Languages</span><br>Python<br>C<br>C++</C></li>
+                          <li><span>Soft Skills</span><br>Creativity<br>Problem Solving<br>Attention to detail</C></li>
+                      </ul>
+                  </div>
+                  <div class="tab-contents" id="education">
+                      <ul>
+                          <li><span>Rajiv Gandhi Institute Technology, Kottayam</span><br>B.Tech , ECE <br>CGPA : 7.25</C></li>
+                          <li><span>St. Jeromes HSS , Vellayamkudi</span><br>Higher secondary <br> Percentage : 96.3 %</C></li>
+                          <li><span>Auxilium EMHSS , Kattappana</span><br>High School<br> Percentage : 88 %</C></li>
+  
+                      </ul>
+                  </div>
+                  <div class="tab-contents" id="courses">
+                    <ul>
+                        <li><span>Joy of computing using Python </span><br> NPTEL <br>2023</C></li>
+                        <li><span>Crash course on Python</span> <br>COURSERA<br>2023</C></li>
+                       
+
+                    </ul>
+                </div>
+              </div>
+          </div>
+      
+  
+      </div>
+  </div>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+  </body>
+</html>
